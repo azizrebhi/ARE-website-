@@ -1,0 +1,45 @@
+/* StatsBadge.css */
+.stats-badge {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    /* Start invisible */
+    transform: translateX(-100%);
+    /* Start off-screen */
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+    height: 100px;
+}
+
+.stats-badge.slide-in {
+    opacity: 1;
+    /* Make visible */
+    transform: translateX(0);
+    /* Slide to the original position */
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1;
+}
+
+.stat-item h3 {
+    font-size: 2em;
+    margin: 0;
+    transition: transform 0.3s ease;
+}
+
+.stat-item p {
+    font-size: 1.2em;
+    margin: 5px 0 0;
+}
+
+.stat-item:hover h3 {
+    transform: scale(1.2);
+    color: #FFD700;
+}
